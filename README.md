@@ -62,8 +62,10 @@ Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.j
 
 - [ ] Número de WhatsApp em `js/site.js` (`WHATSAPP_NUMBER`) e no JSON-LD (`telephone`) do `index.html`.
 - [ ] Morada completa, código postal e horário (procurar por `[` nos ficheiros `.html`); trocar o link do Google Maps pela ficha do studio.
-- [ ] E-mail profissional (`geral@florescerstudio.pt` é provisório) e Instagram (`@florescerstudio` é provisório).
-- [ ] Domínio (`florescerstudio.pt` é provisório) em canonical, og:url, sitemap e robots; criar ficheiro `CNAME`.
+- [x] E-mail profissional: `contato@florescer.com` (Hostinger).
+- [ ] Instagram (`@florescerstudio` é provisório).
+- [x] Domínio `florescer.com` em canonical, og:url, og:image, JSON-LD, sitemap e robots.
+- [ ] Criar o ficheiro `CNAME` e apontar o DNS na Hostinger, só no dia de ligar o GitHub Pages (ver abaixo).
 - [ ] ID do Google Analytics em `js/consent.js`.
 - [ ] `assets/og-image.jpg` (1200×630) e logótipo definitivo.
 - [ ] **Preço da manutenção** do alongamento (não vem no plano de negócio; está `[—] €`).
@@ -75,11 +77,11 @@ Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.j
 
 1. ~~Publicar o repositório no GitHub~~ — feito: [`luisosorio258/florescerstudio`](https://github.com/luisosorio258/florescerstudio) (público, branch `main`).
 2. No GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**.
-3. Quando houver domínio:
-   - criar o ficheiro `CNAME` na raiz só com o domínio (ex.: `florescerstudio.pt`);
-   - no fornecedor do domínio, 4 registos `A` para o domínio raiz (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) e um `CNAME` do `www` para `luisosorio258.github.io`;
+3. Ligar o domínio `florescer.com` (está na Hostinger, que também tem a caixa de e-mail):
+   - criar o ficheiro `CNAME` na raiz só com `florescer.com`. Não criar antes de ligar o Pages e o DNS: com o `CNAME` e sem DNS, o site fica inacessível;
+   - no painel DNS da Hostinger, 4 registos `A` para o domínio raiz (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) e um `CNAME` do `www` para `luisosorio258.github.io`;
    - em Settings → Pages, escrever o domínio e ativar **Enforce HTTPS**.
-4. Trocar `florescerstudio.pt` em canonical, og:url, og:image, JSON-LD, `sitemap.xml` e `robots.txt` se o domínio for outro.
+4. **Não mexer** nos registos `MX` (e `TXT` de SPF/DKIM) da Hostinger: são os do e-mail `contato@florescer.com`. Só se alteram os registos `A` e o `CNAME` do `www`.
 
 Antes do domínio próprio, o site fica em `https://luisosorio258.github.io/florescerstudio/`. Aí a `404.html` aparece sem estilo (usa caminhos absolutos); fica correta assim que o domínio estiver ligado.
 
@@ -92,6 +94,7 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 4 de novembro de 2026
+- **Domínio e e-mail reais:** `florescer.com` (Hostinger) em canonical, Open Graph, JSON-LD, sitemap e robots; e-mail `contato@florescer.com` no contacto, nos dados estruturados e na política de privacidade. O `CNAME` fica para o dia da publicação.
 - **Conteúdo real do negócio** (a partir do briefing da cliente e do plano de negócio ANPME/IEFP):
   - Localização em Valença em todo o site, SEO local (título, descrição, JSON-LD com área servida PT + Galiza e catálogo de preços).
   - Hero com o slogan como título e botão "Marcar horário".
