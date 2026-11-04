@@ -60,7 +60,7 @@ florescerstudio/
 
 ## Como publicar (GitHub Pages, igual ao EMart3D)
 
-1. Publicar o repositório no GitHub como `luisosorio258/florescerstudio` (público, branch `main`).
+1. ~~Publicar o repositório no GitHub~~ — feito: [`luisosorio258/florescerstudio`](https://github.com/luisosorio258/florescerstudio) (público, branch `main`).
 2. No GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**.
 3. Quando houver domínio:
    - criar o ficheiro `CNAME` na raiz só com o domínio (ex.: `florescerstudio.pt`);
@@ -73,3 +73,13 @@ Antes do domínio próprio, o site fica em `https://luisosorio258.github.io/flor
 ## Como ver localmente
 
 Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/...`), por isso só aparece com estilo depois de publicada.
+
+## Histórico de alterações
+
+Registar aqui cada alteração ao site (mais recente primeiro).
+
+### 4 de novembro de 2026
+- **Logótipo e texto mais legíveis.** A fonte Italiana era demasiado fina e quase não se lia sobre o marfim. O logótipo passou a Cormorant Garamond 600 (maior), o "STUDIO" e os traços ficaram mais grossos e sem transparência, o texto corrido passou de peso 300 para 400 e o slogan do rodapé ficou mais escuro. A Italiana deixou de ser carregada.
+- **Repositório publicado no GitHub** (público, via GitHub Desktop). GitHub Pages ainda desligado até os dados reais estarem preenchidos.
+- **Sempre em tema claro.** Removido o modo escuro automático: a marca vive em marfim e, no escuro, o botão principal quase desaparecia.
+- **Primeira versão** da landing page, com a estrutura do EMart3D: hero, manifesto, 6 serviços, experiência, como marcar, FAQ e marcações; política de privacidade, 404, banner de cookies com GA4, SEO (Open Graph, JSON-LD `NailSalon` + FAQ), `robots.txt` e `sitemap.xml`. Texto em português de Portugal, a tratar a cliente por "tu".
