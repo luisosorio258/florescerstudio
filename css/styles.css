@@ -25,7 +25,7 @@ body{
   background:var(--paper);
   color:var(--ink);
   font-family:"Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-weight:300;
+  font-weight:400;
   font-size:17px;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
@@ -65,27 +65,27 @@ strong{font-weight:500;}
   line-height:1;
 }
 .logo-word{
-  font-family:"Italiana", "Cormorant Garamond", serif;
-  font-size:1.45rem;
-  letter-spacing:0.08em;
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-weight:600;
+  font-size:1.6rem;
+  letter-spacing:0.06em;
   text-transform:uppercase;
 }
 .logo-sub{
   display:flex;
   align-items:center;
   gap:8px;
-  margin-top:4px;
-  font-size:0.55rem;
+  margin-top:5px;
+  font-size:0.6rem;
   letter-spacing:0.42em;
   text-transform:uppercase;
-  font-weight:400;
+  font-weight:500;
 }
 .logo-sub::before, .logo-sub::after{
   content:"";
   width:18px;
   height:1px;
   background:currentColor;
-  opacity:0.7;
 }
 .logo-sub::after{margin-left:-0.42em;}
 
@@ -423,11 +423,13 @@ section{padding-block:64px;}
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding-block:40px 100px;}
 .foot{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;}
-.logo-foot .logo-word{font-size:1.8rem;}
+.logo-foot .logo-word{font-size:2rem;}
 .foot-tag{
   font-family:"Cormorant Garamond", serif;
   font-style:italic;
-  color:var(--ink-soft);
+  font-weight:500;
+  font-size:1.15rem;
+  color:var(--ink);
 }
 .foot-links{font-size:0.82rem;color:var(--ink-soft);}
 .foot-links a, .cookie-manage{

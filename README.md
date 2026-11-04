@@ -25,7 +25,7 @@ florescerstudio/
 ## Identidade visual
 
 - **Paleta:** marfim `#F4EEE6`, areia `#EADBCB`, terracota `#B4623F`, champagne `#C9AD7E`, vinho/castanho `#3A1D14`, verde oliva `#3F4A31` (todas como variáveis no topo de `css/styles.css`).
-- **Tipografia:** Italiana (logótipo provisório), Cormorant Garamond (títulos), Jost (texto e etiquetas espaçadas).
+- **Tipografia:** Cormorant Garamond (títulos e logótipo provisório), Jost (texto e etiquetas espaçadas).
 - **Elementos:** arcos (como o arco da receção do moodboard) e formas orgânicas suaves. Sem flores, borboletas, coroas nem excesso de rosa.
 - O logótipo está feito em texto, enquanto o definitivo não chega. Quando chegar, substituir o bloco `.logo` nas páginas por `<img src="assets/logo.svg">`.
 
