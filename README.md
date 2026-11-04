@@ -60,10 +60,10 @@ Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.j
 
 ## Por preencher antes de publicar
 
-- [ ] Número de WhatsApp em `js/site.js` (`WHATSAPP_NUMBER`) e no JSON-LD (`telephone`) do `index.html`.
 - [ ] Morada completa, código postal e horário (procurar por `[` nos ficheiros `.html`); trocar o link do Google Maps pela ficha do studio.
 - [x] E-mail profissional: `contato@florescer.com` (Hostinger).
-- [ ] Instagram (`@florescerstudio` é provisório).
+- [x] Instagram: [`@florescerstudiooficial`](https://www.instagram.com/florescerstudiooficial/).
+- [x] WhatsApp: `+351 931 976 069`.
 - [x] Domínio `florescer.com` em canonical, og:url, og:image, JSON-LD, sitemap e robots.
 - [ ] Criar o ficheiro `CNAME` e apontar o DNS na Hostinger, só no dia de ligar o GitHub Pages (ver abaixo).
 - [ ] ID do Google Analytics em `js/consent.js`.
@@ -94,6 +94,7 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 4 de novembro de 2026
+- **WhatsApp e Instagram reais:** todos os botões de marcação abrem o WhatsApp `+351 931 976 069` (em `js/site.js` e no JSON-LD); o número também aparece no contacto. Instagram passou a `@florescerstudiooficial`.
 - **Domínio e e-mail reais:** `florescer.com` (Hostinger) em canonical, Open Graph, JSON-LD, sitemap e robots; e-mail `contato@florescer.com` no contacto, nos dados estruturados e na política de privacidade. O `CNAME` fica para o dia da publicação.
 - **Conteúdo real do negócio** (a partir do briefing da cliente e do plano de negócio ANPME/IEFP):
   - Localização em Valença em todo o site, SEO local (título, descrição, JSON-LD com área servida PT + Galiza e catálogo de preços).

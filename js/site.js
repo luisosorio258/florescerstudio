@@ -1,6 +1,6 @@
 (function () {
   // Número de WhatsApp num só sítio: todos os links com data-wa ou data-book usam este valor.
-  var WHATSAPP_NUMBER = "351900000000";
+  var WHATSAPP_NUMBER = "351931976069";
   var DEFAULT_MESSAGE = "Olá! Vi a página do Florescer Studio e gostava de fazer uma marcação.";
 
   // Página de marcação online. Enquanto estiver vazio, os botões "Marcar" abrem o WhatsApp.
