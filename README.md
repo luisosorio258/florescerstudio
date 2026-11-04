@@ -47,6 +47,20 @@ florescerstudio/
 
 No `index.html`, a secção começa no comentário `SERVIÇOS E PREÇOS`. Cada preço está num `<span class="price">`. Para uma categoria nova (ex.: maquilhagem), copiar um bloco `<div class="price-cat">` inteiro e, se quiser, um cartão novo nas categorias do topo.
 
+### Mensagem padrão de marcação (WhatsApp)
+
+Ao tocar em "Marcar", o WhatsApp abre com esta mensagem já escrita (definida em `BOOKING_MESSAGE`, `js/site.js`):
+
+```
+Olá! Vi o site do Florescer Studio e gostava de fazer uma marcação.
+
+Serviço: {servico}
+Dias e horários que me dão jeito:
+Nome:
+```
+
+`{servico}` é preenchido com o valor `data-book` do botão (ex.: os botões da tabela de preços enviam "Mãos", "Alongamento em gel", "Pés" ou "Spa"); nos botões gerais fica em branco para a cliente escrever.
+
 ### Marcação online
 
 Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.js` estiver vazio, abrem o WhatsApp com uma mensagem pronta; quando houver sistema de agendamento, basta colocar o link lá e todos os botões passam a usá-lo. O sistema de agendamento ainda está por decidir.
@@ -60,7 +74,9 @@ Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.j
 
 ## Por preencher antes de publicar
 
-- [ ] Morada completa, código postal e horário (procurar por `[` nos ficheiros `.html`); trocar o link do Google Maps pela ficha do studio.
+- [x] Morada: Rua Edifício S. Gião, L, 14-N, rés-do-chão, 4930-644 Valença.
+- [ ] Horário (procurar por `[` nos ficheiros `.html`).
+- [ ] Quando existir o Perfil da Empresa no Google, trocar o link "Ver no Google Maps" pelo link da ficha do studio.
 - [x] E-mail profissional: `contato@florescer.com` (Hostinger).
 - [x] Instagram: [`@florescerstudiooficial`](https://www.instagram.com/florescerstudiooficial/).
 - [x] WhatsApp: `+351 931 976 069`.
@@ -94,6 +110,8 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 4 de novembro de 2026
+- **Morada do studio** (Rua Edifício S. Gião, L, 14-N, r/c, 4930-644 Valença) no contacto e nos dados estruturados; link do Google Maps aponta para a morada.
+- **Mensagem padrão de marcação no WhatsApp**, com campos para serviço, dias e horários preferidos e nome. Os botões da tabela de preços já preenchem o serviço.
 - **WhatsApp e Instagram reais:** todos os botões de marcação abrem o WhatsApp `+351 931 976 069` (em `js/site.js` e no JSON-LD); o número também aparece no contacto. Instagram passou a `@florescerstudiooficial`.
 - **Domínio e e-mail reais:** `florescer.com` (Hostinger) em canonical, Open Graph, JSON-LD, sitemap e robots; e-mail `contato@florescer.com` no contacto, nos dados estruturados e na política de privacidade. O `CNAME` fica para o dia da publicação.
 - **Conteúdo real do negócio** (a partir do briefing da cliente e do plano de negócio ANPME/IEFP):
