@@ -132,6 +132,7 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 23 de novembro de 2026
+- **Apresentação do site em PDF** para a cliente (`docs/apresentacao-site.pdf`, 6 páginas, só local): capa com a imagem de partilha, visão geral e página inicial, secções do site, marcação online (fluxo e agenda no celular), WhatsApp e teste de responsividade, Google/privacidade/próximos passos. As capturas são o próprio site ao vivo (molduras) e uma imagem da agenda do Cal.com (`docs/captura-agenda-celular.png`). Para regenerar: servidor local (`node .claude/serve.js`) e imprimir `http://localhost:5511/docs/apresentacao-site.html` com o Chrome em modo headless.
 - **Teste de responsividade** (telemóveis, tablets e computadores: 320, 360, 375, 390, 430, 768, 820, 1024, 1280 e 1600 px), na página inicial e na de privacidade, com verificação automática de rolagem horizontal, conteúdo fora do ecrã, texto cortado e alvos de toque pequenos. Problemas encontrados e corrigidos:
   - a 320 px os cartões de categorias não cabiam lado a lado (agora um por linha) e, nos telemóveis, o título "Alongamentos" não cabia no cartão (letra e margem menores até 480 px);
   - o link "Serviços e preços" do topo tinha 25 px de altura para tocar (agora 44 px);
