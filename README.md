@@ -67,7 +67,7 @@ Nome:
 
 ### Marcação online
 
-A marcação online usa o **Cal.com** (plano gratuito, conta `cal.com/florescerstudio`) e está **pronta mas desligada**. Liga-se com uma linha em `js/site.js`:
+A marcação online usa o **Cal.com** (plano gratuito, conta `cal.com/florescerstudio`) e está **ligada** (aprovada pela cliente). O interruptor é uma linha em `js/site.js`:
 
 ```js
 var CAL_USERNAME = "florescerstudio";   // vazio = tudo pelo WhatsApp
@@ -79,7 +79,7 @@ Com o interruptor ligado:
 - Os textos com `class="only-online"` aparecem e os `only-whatsapp` somem ("Como marcar", resposta "Como faço uma marcação?", bloco de contacto com "Marcar online" + link para dúvidas no WhatsApp).
 - O botão flutuante (`data-wa-only`) continua sempre a abrir o WhatsApp.
 
-Ao ligar, atualizar também a resposta "Como faço uma marcação?" no JSON-LD `FAQPage` do `index.html` (o Google lê essa versão).
+Se um dia se voltar a desligar, repor também a resposta "Como faço uma marcação?" no JSON-LD `FAQPage` do `index.html` (o Google lê essa versão, que hoje fala da marcação online).
 
 Serviço novo: criá-lo no Cal.com (duplicar um existente) e acrescentar `data-cal="novo-slug"` à linha na tabela de preços.
 
@@ -104,7 +104,8 @@ Serviço novo: criá-lo no Cal.com (duplicar um existente) e acrescentar `data-c
 - [x] Imagem de partilha `assets/og-image.png` (provisória, só tipografia; refazer com o logótipo definitivo a partir de `og-image-source.html`).
 - [x] Ícone do site `assets/favicon.svg` (provisório).
 - [ ] Logótipo definitivo (trocar o bloco `.logo`, o favicon e a og-image).
-- [ ] Ligar a marcação online (`CAL_USERNAME`) quando a cliente aprovar, e acertar valores/durações no site e no Cal.com.
+- [x] Marcação online ligada (`CAL_USERNAME = "florescerstudio"`).
+- [ ] Acertar valores e durações no site e no Cal.com quando a cliente devolver a lista.
 - [ ] **Preço da manutenção** do alongamento (não vem no plano de negócio; está `[—] €`).
 - [ ] Confirmar com a cliente: preços (são os "previstos" do plano), durações das mãos, textos de "Qual escolher?", o que inclui a manicure simples, regra de desmarcação (24h) e duração do verniz gel.
 - [ ] Fotos reais para ativar a galeria.
@@ -131,6 +132,7 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 23 de novembro de 2026
+- **Marcação online ligada** (aprovada pela cliente): `CAL_USERNAME = "florescerstudio"`. Os botões "Marcar" e cada serviço da tabela abrem a agenda do Cal.com; textos de "Como marcar", FAQ e contacto na versão online; resposta "Como faço uma marcação?" do JSON-LD atualizada.
 - **Marcação online pronta para ligar** (interruptor `CAL_USERNAME` em `js/site.js`, desligado): pop-up do Cal.com nos botões "Marcar", cada serviço da tabela de preços clicável e ligado ao seu link (`data-cal`), textos alternativos online/WhatsApp em "Como marcar", na FAQ e no contacto. Testado no Chrome com o interruptor ligado: a Manicure simples abriu a agenda certa (45 min) com a cor da marca. Desligado de novo.
 - **Política de privacidade** atualizada para a marcação online: dados recolhidos na marcação, prestadores (Cal.com, Google Agenda/Analytics, Meta/WhatsApp), transferências fora da UE, armazenamento técnico do Cal.com e prazos de conservação.
 - **Ícone do site** (`assets/favicon.svg`) e **imagem de partilha** (`assets/og-image.png`, 1200×630) provisórios, ligados em todas as páginas; meta tags passaram de `og-image.jpg` para `og-image.png`.

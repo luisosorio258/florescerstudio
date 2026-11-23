@@ -14,7 +14,7 @@
   // Marcação online (Cal.com). Enquanto estiver vazio, os botões "Marcar" abrem o WhatsApp.
   // Para ativar: CAL_USERNAME = "florescerstudio". Os botões passam a abrir a agenda,
   // cada serviço da tabela de preços (data-cal) abre a sua marcação e os textos "only-online" aparecem.
-  var CAL_USERNAME = "";
+  var CAL_USERNAME = "florescerstudio";
   var BRAND_COLOR = "#3A1D14";
 
   function whatsappLink(message) {
