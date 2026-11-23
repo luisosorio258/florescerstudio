@@ -114,7 +114,7 @@ Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 23 de novembro de 2026
 - **Domínio corrigido para `florescerstudio.com`** (o registado na Hostinger) e e-mail para `contato@florescerstudio.com`, em todo o site: canonical, Open Graph, JSON-LD, contacto, privacidade, sitemap e robots. O `florescer.com` anterior estava errado.
-- **Marcação de teste** feita no Cal.com (Pedicure simples, sexta 27/11 às 10:00): a página "reserva enviada, aguarda confirmação" e o e-mail para a cliente funcionaram. Os avisos para a profissional vão para o e-mail principal da conta Cal.com (`contato@florescerstudio.com`), não para o Gmail da agenda.
+- **Marcação de teste** feita no Cal.com (Pedicure simples, sexta 27/11 às 10:00). **Fluxo completo validado:** cliente marca → fica pendente (página e e-mail "aguarda confirmação") → a profissional recebe o pedido em `contato@florescerstudio.com` (o e-mail principal da conta Cal.com, não o Gmail da agenda) → aprova → a cliente recebe a confirmação com morada e links para cancelar/reagendar → o evento aparece na Google Agenda.
 - **Horário de funcionamento** provisório: segunda a sexta, 8h às 17h, no contacto e nos dados estruturados (`openingHoursSpecification`).
 - **Página de teste da marcação online** (`teste-marcacao.html`) com a agenda do Cal.com embutida e a cor da marca, ligada à conta `florescerstudio`.
 - **Teste do Cal.com** (conta `cal.com/florescerstudio`, agenda Google `admcontatoflorescerstudio@gmail.com`):
