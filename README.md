@@ -132,6 +132,12 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 23 de novembro de 2026
+- **Teste de responsividade** (telemóveis, tablets e computadores: 320, 360, 375, 390, 430, 768, 820, 1024, 1280 e 1600 px), na página inicial e na de privacidade, com verificação automática de rolagem horizontal, conteúdo fora do ecrã, texto cortado e alvos de toque pequenos. Problemas encontrados e corrigidos:
+  - a 320 px os cartões de categorias não cabiam lado a lado (agora um por linha) e, nos telemóveis, o título "Alongamentos" não cabia no cartão (letra e margem menores até 480 px);
+  - o link "Serviços e preços" do topo tinha 25 px de altura para tocar (agora 44 px);
+  - os "Marcar" das categorias voltavam a aparecer porque `display` anulava o atributo `hidden` (agora `[hidden]` ganha sempre).
+  - Resultado final: os 10 tamanhos sem problemas; a marcação do Cal.com abre bem no telemóvel, ocupa a largura e tem o X para fechar.
+  - A página de teste fica em `.claude/responsive.html` (local, não vai para o GitHub): abrir `http://localhost:5511/.claude/responsive.html` com o servidor de pré-visualização (`node .claude/serve.js`); `?page=/privacidade.html` testa outra página.
 - **Correção:** os botões "Marcar", "Marcar horário" e "Marcar online" abriam o perfil do Cal.com num ecrã escuro sem botão de fechar. Agora levam à tabela de serviços e preços, onde cada serviço abre a sua marcação (que tem o X para fechar). Acrescentada a indicação "Toca no serviço que queres para escolher o dia e a hora." e ajustados os textos de "Como marcar" e da FAQ. Os "Marcar" das categorias ficam escondidos no modo online.
 - **Marcação online ligada** (aprovada pela cliente): `CAL_USERNAME = "florescerstudio"`. Os botões "Marcar" e cada serviço da tabela abrem a agenda do Cal.com; textos de "Como marcar", FAQ e contacto na versão online; resposta "Como faço uma marcação?" do JSON-LD atualizada.
 - **Marcação online pronta para ligar** (interruptor `CAL_USERNAME` em `js/site.js`, desligado): pop-up do Cal.com nos botões "Marcar", cada serviço da tabela de preços clicável e ligado ao seu link (`data-cal`), textos alternativos online/WhatsApp em "Como marcar", na FAQ e no contacto. Testado no Chrome com o interruptor ligado: a Manicure simples abriu a agenda certa (45 min) com a cor da marca. Desligado de novo.
