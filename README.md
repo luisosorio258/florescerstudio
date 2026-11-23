@@ -74,7 +74,7 @@ var CAL_USERNAME = "florescerstudio";   // vazio = tudo pelo WhatsApp
 ```
 
 Com o interruptor ligado:
-- Os botões com `data-book` (topo, "Marcar horário", categorias, contacto) abrem a agenda do Cal.com por cima do site (pop-up), sem o ícone do WhatsApp.
+- Os botões gerais com `data-book` (topo, "Marcar horário", contacto) levam à tabela de serviços (`#servicos`), sem o ícone do WhatsApp. Não abrem o perfil do Cal.com porque esse pop-up não tem botão de fechar. Os "Marcar" ao lado de cada categoria ficam escondidos.
 - Cada serviço da tabela de preços (`<li class="price-row" data-cal="slug">`) fica clicável, mostra "Marcar →" e abre a marcação desse serviço. O `slug` tem de ser igual ao do link no Cal.com (ex.: `pedicure`, `verniz-gel`).
 - Os textos com `class="only-online"` aparecem e os `only-whatsapp` somem ("Como marcar", resposta "Como faço uma marcação?", bloco de contacto com "Marcar online" + link para dúvidas no WhatsApp).
 - O botão flutuante (`data-wa-only`) continua sempre a abrir o WhatsApp.
@@ -132,6 +132,7 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 23 de novembro de 2026
+- **Correção:** os botões "Marcar", "Marcar horário" e "Marcar online" abriam o perfil do Cal.com num ecrã escuro sem botão de fechar. Agora levam à tabela de serviços e preços, onde cada serviço abre a sua marcação (que tem o X para fechar). Acrescentada a indicação "Toca no serviço que queres para escolher o dia e a hora." e ajustados os textos de "Como marcar" e da FAQ. Os "Marcar" das categorias ficam escondidos no modo online.
 - **Marcação online ligada** (aprovada pela cliente): `CAL_USERNAME = "florescerstudio"`. Os botões "Marcar" e cada serviço da tabela abrem a agenda do Cal.com; textos de "Como marcar", FAQ e contacto na versão online; resposta "Como faço uma marcação?" do JSON-LD atualizada.
 - **Marcação online pronta para ligar** (interruptor `CAL_USERNAME` em `js/site.js`, desligado): pop-up do Cal.com nos botões "Marcar", cada serviço da tabela de preços clicável e ligado ao seu link (`data-cal`), textos alternativos online/WhatsApp em "Como marcar", na FAQ e no contacto. Testado no Chrome com o interruptor ligado: a Manicure simples abriu a agenda certa (45 min) com a cor da marca. Desligado de novo.
 - **Política de privacidade** atualizada para a marcação online: dados recolhidos na marcação, prestadores (Cal.com, Google Agenda/Analytics, Meta/WhatsApp), transferências fora da UE, armazenamento técnico do Cal.com e prazos de conservação.

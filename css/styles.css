@@ -376,6 +376,7 @@ section{padding-block:64px;scroll-margin-top:70px;}
 }
 .row-book::after{content:" →";}
 .link-light{color:var(--on-dark);}
+.section-hint{color:var(--terracota-ink);font-weight:500;}
 .price-note{font-size:0.82rem;color:var(--ink-soft);margin-top:12px;font-style:italic;}
 
 /* ---------- qual escolher ---------- */

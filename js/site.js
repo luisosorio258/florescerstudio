@@ -41,7 +41,14 @@
   for (var j = 0; j < bookLinks.length; j++) {
     var link = bookLinks[j];
     if (online && !link.hasAttribute("data-wa-only")) {
-      makeCalLink(link, CAL_USERNAME);
+      // Os botões gerais levam à tabela de serviços: a cliente vê o preço e abre a marcação
+      // do serviço escolhido (o pop-up do perfil do Cal.com não tem botão de fechar).
+      if (link.closest(".price-cat-head")) {
+        link.hidden = true;
+      } else {
+        link.href = "#servicos";
+        link.removeAttribute("target");
+      }
       var icon = link.querySelector(".ico");
       if (icon) icon.parentNode.removeChild(icon);
     } else {
