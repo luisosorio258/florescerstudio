@@ -13,6 +13,7 @@ florescerstudio/
 ├── index.html          # página principal
 ├── privacidade.html    # política de privacidade (RGPD)
 ├── 404.html            # página de erro
+├── teste-marcacao.html # TESTE da agenda Cal.com (escondida, apagar no fim)
 ├── css/
 │   └── styles.css      # paleta, tipografia e layout
 ├── js/
@@ -65,6 +66,8 @@ Nome:
 
 Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.js` estiver vazio, abrem o WhatsApp com uma mensagem pronta; quando houver sistema de agendamento, basta colocar o link lá e todos os botões passam a usá-lo. O sistema de agendamento ainda está por decidir.
 
+**Em teste: Cal.com (plano gratuito).** A página `teste-marcacao.html` mostra a agenda do Cal.com embutida no visual do site. Não está ligada a nenhuma página, tem `noindex` e não entra no sitemap. Para testar, preencher `CAL_LINK` no fim do ficheiro com o nome de utilizador do Cal.com (ou `utilizador/servico` para um só serviço). Quando o teste acabar, apagar a página ou passar a agenda para o site e pôr o link em `BOOKING_URL`.
+
 ## Melhorias em relação ao EMart3D
 
 - O número de WhatsApp está **num só sítio** (`js/site.js`). Os links usam `data-wa="mensagem"`.
@@ -75,7 +78,7 @@ Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.j
 ## Por preencher antes de publicar
 
 - [x] Morada: Rua Edifício S. Gião, L, 14-N, rés-do-chão, 4930-644 Valença.
-- [ ] Horário (procurar por `[` nos ficheiros `.html`).
+- [x] Horário: segunda a sexta, 8h às 17h (provisório, "padrão" até a cliente confirmar; sábado não aparece).
 - [ ] Quando existir o Perfil da Empresa no Google, trocar o link "Ver no Google Maps" pelo link da ficha do studio.
 - [x] E-mail profissional: `contato@florescer.com` (Hostinger).
 - [x] Instagram: [`@florescerstudiooficial`](https://www.instagram.com/florescerstudiooficial/).
@@ -108,6 +111,10 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 ## Histórico de alterações
 
 Registar aqui cada alteração ao site (mais recente primeiro).
+
+### 23 de novembro de 2026
+- **Horário de funcionamento** provisório: segunda a sexta, 8h às 17h, no contacto e nos dados estruturados (`openingHoursSpecification`).
+- **Página de teste da marcação online** (`teste-marcacao.html`) com a agenda do Cal.com embutida e a cor da marca; à espera do link da conta para o teste.
 
 ### 4 de novembro de 2026
 - **Morada do studio** (Rua Edifício S. Gião, L, 14-N, r/c, 4930-644 Valença) no contacto e nos dados estruturados; link do Google Maps aponta para a morada.
