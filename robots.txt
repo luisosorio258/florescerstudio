@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://florescer.com/sitemap.xml
+Sitemap: https://florescerstudio.com/sitemap.xml

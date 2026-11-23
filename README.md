@@ -80,10 +80,10 @@ Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.j
 - [x] Morada: Rua Edifício S. Gião, L, 14-N, rés-do-chão, 4930-644 Valença.
 - [x] Horário: segunda a sexta, 8h às 17h (provisório, "padrão" até a cliente confirmar; sábado não aparece).
 - [ ] Quando existir o Perfil da Empresa no Google, trocar o link "Ver no Google Maps" pelo link da ficha do studio.
-- [x] E-mail profissional: `contato@florescer.com` (Hostinger).
+- [x] E-mail profissional: `contato@florescerstudio.com` (Hostinger).
 - [x] Instagram: [`@florescerstudiooficial`](https://www.instagram.com/florescerstudiooficial/).
 - [x] WhatsApp: `+351 931 976 069`.
-- [x] Domínio `florescer.com` em canonical, og:url, og:image, JSON-LD, sitemap e robots.
+- [x] Domínio `florescerstudio.com` em canonical, og:url, og:image, JSON-LD, sitemap e robots.
 - [ ] Criar o ficheiro `CNAME` e apontar o DNS na Hostinger, só no dia de ligar o GitHub Pages (ver abaixo).
 - [ ] ID do Google Analytics em `js/consent.js`.
 - [ ] `assets/og-image.jpg` (1200×630) e logótipo definitivo.
@@ -96,11 +96,11 @@ Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.j
 
 1. ~~Publicar o repositório no GitHub~~ — feito: [`luisosorio258/florescerstudio`](https://github.com/luisosorio258/florescerstudio) (público, branch `main`).
 2. No GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**.
-3. Ligar o domínio `florescer.com` (está na Hostinger, que também tem a caixa de e-mail):
-   - criar o ficheiro `CNAME` na raiz só com `florescer.com`. Não criar antes de ligar o Pages e o DNS: com o `CNAME` e sem DNS, o site fica inacessível;
+3. Ligar o domínio `florescerstudio.com` (está na Hostinger, que também tem a caixa de e-mail):
+   - criar o ficheiro `CNAME` na raiz só com `florescerstudio.com`. Não criar antes de ligar o Pages e o DNS: com o `CNAME` e sem DNS, o site fica inacessível;
    - no painel DNS da Hostinger, 4 registos `A` para o domínio raiz (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) e um `CNAME` do `www` para `luisosorio258.github.io`;
    - em Settings → Pages, escrever o domínio e ativar **Enforce HTTPS**.
-4. **Não mexer** nos registos `MX` (e `TXT` de SPF/DKIM) da Hostinger: são os do e-mail `contato@florescer.com`. Só se alteram os registos `A` e o `CNAME` do `www`.
+4. **Não mexer** nos registos `MX` (e `TXT` de SPF/DKIM) da Hostinger: são os do e-mail `contato@florescerstudio.com`. Só se alteram os registos `A` e o `CNAME` do `www`.
 
 Antes do domínio próprio, o site fica em `https://luisosorio258.github.io/florescerstudio/`. Aí a `404.html` aparece sem estilo (usa caminhos absolutos); fica correta assim que o domínio estiver ligado.
 
@@ -113,6 +113,8 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 23 de novembro de 2026
+- **Domínio corrigido para `florescerstudio.com`** (o registado na Hostinger) e e-mail para `contato@florescerstudio.com`, em todo o site: canonical, Open Graph, JSON-LD, contacto, privacidade, sitemap e robots. O `florescer.com` anterior estava errado.
+- **Marcação de teste** feita no Cal.com (Pedicure simples, sexta 27/11 às 10:00): a página "reserva enviada, aguarda confirmação" e o e-mail para a cliente funcionaram. Os avisos para a profissional vão para o e-mail principal da conta Cal.com (`contato@florescerstudio.com`), não para o Gmail da agenda.
 - **Horário de funcionamento** provisório: segunda a sexta, 8h às 17h, no contacto e nos dados estruturados (`openingHoursSpecification`).
 - **Página de teste da marcação online** (`teste-marcacao.html`) com a agenda do Cal.com embutida e a cor da marca, ligada à conta `florescerstudio`.
 - **Teste do Cal.com** (conta `cal.com/florescerstudio`, agenda Google `admcontatoflorescerstudio@gmail.com`):
