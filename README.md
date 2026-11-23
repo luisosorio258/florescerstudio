@@ -114,7 +114,12 @@ Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 23 de novembro de 2026
 - **Horário de funcionamento** provisório: segunda a sexta, 8h às 17h, no contacto e nos dados estruturados (`openingHoursSpecification`).
-- **Página de teste da marcação online** (`teste-marcacao.html`) com a agenda do Cal.com embutida e a cor da marca; à espera do link da conta para o teste.
+- **Página de teste da marcação online** (`teste-marcacao.html`) com a agenda do Cal.com embutida e a cor da marca, ligada à conta `florescerstudio`.
+- **Teste do Cal.com** (conta `cal.com/florescerstudio`, agenda Google `admcontatoflorescerstudio@gmail.com`):
+  - 3 serviços de teste: Pedicure simples (60 min, `/pedicure`), Pedicure com verniz gel (90 min, `/pedicure-verniz-gel`) e Verniz gel (60 min, provisório, `/verniz-gel`).
+  - Em cada um: local presencial com a morada, 15 min de intervalo depois, antecedência mínima de 12 h, horários de 30 em 30 min, **confirmação manual** (as pendentes já bloqueiam o horário), telemóvel (WhatsApp) obrigatório e pergunta "Tem verniz gel ou gel feito por outra profissional para remover?" (Sim/Não).
+  - Disponibilidade segunda a sexta, 8h–17h, fuso Europe/Lisbon.
+  - **Resultado:** um evento criado diretamente na Google Agenda (quinta 26/11, 10:00–11:30) bloqueou corretamente os horários de 09:00 a 11:00 da Pedicure simples. Marcações do WhatsApp anotadas na Google Agenda impedem sobreposições no site.
 
 ### 4 de novembro de 2026
 - **Morada do studio** (Rua Edifício S. Gião, L, 14-N, r/c, 4930-644 Valença) no contacto e nos dados estruturados; link do Google Maps aponta para a morada.
