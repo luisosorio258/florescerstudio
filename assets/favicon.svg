@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Ícone provisório: arco da marca em vinho com o "F" em marfim. Trocar quando houver logótipo definitivo. -->
+  <path d="M8 62V30a24 24 0 0 1 48 0v32z" fill="#3A1D14"/>
+  <text x="32" y="53" text-anchor="middle" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="36" font-weight="600" fill="#F4EEE6">F</text>
+</svg>

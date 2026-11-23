@@ -13,13 +13,16 @@ florescerstudio/
 ├── index.html          # página principal
 ├── privacidade.html    # política de privacidade (RGPD)
 ├── 404.html            # página de erro
-├── teste-marcacao.html # TESTE da agenda Cal.com (escondida, apagar no fim)
 ├── css/
 │   └── styles.css      # paleta, tipografia e layout
 ├── js/
-│   ├── site.js         # número de WhatsApp + link de marcação online (BOOKING_URL)
+│   ├── site.js         # WhatsApp + interruptor da marcação online (CAL_USERNAME)
 │   └── consent.js      # banner de cookies + Google Analytics
-├── assets/             # logótipo, og-image e fotos (a adicionar)
+├── assets/
+│   ├── favicon.svg            # ícone provisório (arco vinho com "F")
+│   ├── og-image.png           # imagem de partilha 1200×630
+│   └── og-image-source.html   # fonte da og-image (para a gerar de novo)
+├── docs/               # documentos para a cliente (só local, não vão para o GitHub)
 ├── robots.txt
 ├── sitemap.xml
 └── README.md
@@ -64,9 +67,21 @@ Nome:
 
 ### Marcação online
 
-Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.js` estiver vazio, abrem o WhatsApp com uma mensagem pronta; quando houver sistema de agendamento, basta colocar o link lá e todos os botões passam a usá-lo. O sistema de agendamento ainda está por decidir.
+A marcação online usa o **Cal.com** (plano gratuito, conta `cal.com/florescerstudio`) e está **pronta mas desligada**. Liga-se com uma linha em `js/site.js`:
 
-**Em teste: Cal.com (plano gratuito).** A página `teste-marcacao.html` mostra a agenda do Cal.com embutida no visual do site. Não está ligada a nenhuma página, tem `noindex` e não entra no sitemap. Para testar, preencher `CAL_LINK` no fim do ficheiro com o nome de utilizador do Cal.com (ou `utilizador/servico` para um só serviço). Quando o teste acabar, apagar a página ou passar a agenda para o site e pôr o link em `BOOKING_URL`.
+```js
+var CAL_USERNAME = "florescerstudio";   // vazio = tudo pelo WhatsApp
+```
+
+Com o interruptor ligado:
+- Os botões com `data-book` (topo, "Marcar horário", categorias, contacto) abrem a agenda do Cal.com por cima do site (pop-up), sem o ícone do WhatsApp.
+- Cada serviço da tabela de preços (`<li class="price-row" data-cal="slug">`) fica clicável, mostra "Marcar →" e abre a marcação desse serviço. O `slug` tem de ser igual ao do link no Cal.com (ex.: `pedicure`, `verniz-gel`).
+- Os textos com `class="only-online"` aparecem e os `only-whatsapp` somem ("Como marcar", resposta "Como faço uma marcação?", bloco de contacto com "Marcar online" + link para dúvidas no WhatsApp).
+- O botão flutuante (`data-wa-only`) continua sempre a abrir o WhatsApp.
+
+Ao ligar, atualizar também a resposta "Como faço uma marcação?" no JSON-LD `FAQPage` do `index.html` (o Google lê essa versão).
+
+Serviço novo: criá-lo no Cal.com (duplicar um existente) e acrescentar `data-cal="novo-slug"` à linha na tabela de preços.
 
 ## Melhorias em relação ao EMart3D
 
@@ -86,7 +101,10 @@ Todos os botões "Marcar" usam `data-book`. Enquanto `BOOKING_URL` em `js/site.j
 - [x] Domínio `florescerstudio.com` em canonical, og:url, og:image, JSON-LD, sitemap e robots.
 - [ ] Criar o ficheiro `CNAME` e apontar o DNS na Hostinger, só no dia de ligar o GitHub Pages (ver abaixo).
 - [ ] ID do Google Analytics em `js/consent.js`.
-- [ ] `assets/og-image.jpg` (1200×630) e logótipo definitivo.
+- [x] Imagem de partilha `assets/og-image.png` (provisória, só tipografia; refazer com o logótipo definitivo a partir de `og-image-source.html`).
+- [x] Ícone do site `assets/favicon.svg` (provisório).
+- [ ] Logótipo definitivo (trocar o bloco `.logo`, o favicon e a og-image).
+- [ ] Ligar a marcação online (`CAL_USERNAME`) quando a cliente aprovar, e acertar valores/durações no site e no Cal.com.
 - [ ] **Preço da manutenção** do alongamento (não vem no plano de negócio; está `[—] €`).
 - [ ] Confirmar com a cliente: preços (são os "previstos" do plano), durações das mãos, textos de "Qual escolher?", o que inclui a manicure simples, regra de desmarcação (24h) e duração do verniz gel.
 - [ ] Fotos reais para ativar a galeria.
@@ -113,6 +131,10 @@ Abrir o `index.html` no navegador. A `404.html` usa caminhos absolutos (`/css/..
 Registar aqui cada alteração ao site (mais recente primeiro).
 
 ### 23 de novembro de 2026
+- **Marcação online pronta para ligar** (interruptor `CAL_USERNAME` em `js/site.js`, desligado): pop-up do Cal.com nos botões "Marcar", cada serviço da tabela de preços clicável e ligado ao seu link (`data-cal`), textos alternativos online/WhatsApp em "Como marcar", na FAQ e no contacto. Testado no Chrome com o interruptor ligado: a Manicure simples abriu a agenda certa (45 min) com a cor da marca. Desligado de novo.
+- **Política de privacidade** atualizada para a marcação online: dados recolhidos na marcação, prestadores (Cal.com, Google Agenda/Analytics, Meta/WhatsApp), transferências fora da UE, armazenamento técnico do Cal.com e prazos de conservação.
+- **Ícone do site** (`assets/favicon.svg`) e **imagem de partilha** (`assets/og-image.png`, 1200×630) provisórios, ligados em todas as páginas; meta tags passaram de `og-image.jpg` para `og-image.png`.
+- **Removida a página de teste** `teste-marcacao.html`.
 - **Todos os serviços no Cal.com** (15 no total, duplicados do Pedicure simples, por isso com morada, intervalo de 15 min, antecedência de 12 h, confirmação manual e as mesmas perguntas): Manicure simples 45 min, Verniz gel 60, Blindagem 75, Banho de gel 90, Alongamento curto/médio/longo 120/135/150, Manutenção 90, Pedicure simples 60, Pedicure com verniz gel 90, Plástica dos pés 120, Spa mãos 45, Ritual com parafina 60, Spa dos pés 120, Remoção total de gel 30. **Durações provisórias** (só as dos pés vêm do plano de negócio). Os extras (nail art, francesinha, reparação, remoção de outra profissional) não têm marcação própria: vão nas notas e na pergunta do formulário.
 - **Documentos para a cliente** em `docs/` (não vão para o GitHub, ver `.gitignore`): `relatorio-marcacao-online.pdf` (resultado dos testes e recomendação do Cal.com) e `lista-servicos-valores-duracao.pdf` (valores e durações para ela confirmar, com perguntas sobre horário, intervalo, antecedência, confirmação e cancelamento). Os PDFs são gerados a partir dos `.html` com o Chrome em modo headless.
 - **Domínio corrigido para `florescerstudio.com`** (o registado na Hostinger) e e-mail para `contato@florescerstudio.com`, em todo o site: canonical, Open Graph, JSON-LD, contacto, privacidade, sitemap e robots. O `florescer.com` anterior estava errado.

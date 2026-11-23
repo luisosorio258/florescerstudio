@@ -362,6 +362,20 @@ section{padding-block:64px;scroll-margin-top:70px;}
 }
 .price small{font-size:0.75rem;font-family:"Jost", sans-serif;font-weight:400;}
 .dur{font-size:0.78rem;color:var(--ink-soft);white-space:nowrap;}
+/* com a marcação online ativa (js/site.js), cada serviço é clicável */
+.price-row.is-bookable{cursor:pointer;border-radius:8px;padding-inline:10px;margin-inline:-10px;transition:background-color .2s ease;}
+.price-row.is-bookable:hover,.price-row.is-bookable:focus-visible{background:var(--areia);outline:none;}
+.row-book{
+  display:inline-block;
+  margin-top:4px;
+  font-size:0.7rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  font-weight:500;
+  color:var(--terracota-ink);
+}
+.row-book::after{content:" →";}
+.link-light{color:var(--on-dark);}
 .price-note{font-size:0.82rem;color:var(--ink-soft);margin-top:12px;font-style:italic;}
 
 /* ---------- qual escolher ---------- */
